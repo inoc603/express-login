@@ -4,6 +4,7 @@
 
 const MongoUserStore = require('../user-stores/mongo')
 const expect = require('chai').expect
+const _ = require('lodash')
 
 let store
 
@@ -22,12 +23,27 @@ describe('Mongo user store', () => {
     expect(store.client).to.exist
   })
 
-  it('should add insert a doc', async () => {
+  it('should insert a doc', async () => {
     const res = await store.add(rec)
     expect(res).to.exist
   })
 
   it('should find the doc', async () => {
+    const res = await store.findOne(rec)
+    // console.log(res)
+    expect(res).to.exist
+  })
+
+  it('should update the doc', async () => {
+    const newRec = _.clone(rec)
+    newRec.changed = 1
+    const res = await store.update(rec, newRec)
+    // console.log(res)
+    expect(res).to.exist
+  })
+
+  it('should delete the doc', async () => {
+    await store.remove(rec)
     const res = await store.findOne(rec)
     console.log(res)
   })

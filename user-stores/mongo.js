@@ -23,8 +23,8 @@ class MongoUserStore {
     this.users = this.client.collection('user')
   }
 
-  find() {
-
+  find(opts) {
+    return this.users.find(opts)
   }
 
   findOne(opts) {
@@ -36,12 +36,12 @@ class MongoUserStore {
     return this.users.insert(user)
   }
 
-  remove() {
-
+  remove(opts) {
+    return this.users.deleteOne(opts)
   }
 
-  update() {
-
+  update(query, opts) {
+    return this.users.update(query, opts)
   }
 }
 
