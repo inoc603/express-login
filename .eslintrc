@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "orientsoft/node"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  }
+}

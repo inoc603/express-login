@@ -1,0 +1,37 @@
+{
+  "name": "express-login",
+  "version": "1.0.0",
+  "description": "Login and session management for express",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require tests/loader.js tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inoc603/express-login.git"
+  },
+  "keywords": [
+    "express",
+    "session",
+    "login"
+  ],
+  "author": "INOC603",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inoc603/express-login/issues"
+  },
+  "homepage": "https://github.com/inoc603/express-login#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "mongodb": "^2.1.4",
+    "nodent": "^2.3.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^5.0.0-beta6",
+    "chai": "^3.4.1",
+    "eslint": "^1.10.3",
+    "eslint-config-orientsoft": "0.0.2",
+    "mocha": "^2.3.4"
+  }
+}
